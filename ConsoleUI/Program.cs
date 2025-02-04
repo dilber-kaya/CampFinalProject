@@ -7,7 +7,7 @@ using DataAccess.Concrete.InMemory;
 ProductManager productManager = new ProductManager(new EfProductDal());
 //IProductDal (interface) InMemoryProductDal' ın referansını tutar
 
-foreach (var product in productManager.GetAll())
+foreach (var product in productManager.GetByUnitPrice(40,100))
 {
     Console.WriteLine(product.ProductName);
 }
